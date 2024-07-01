@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "lib": ["ESNext"],
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler"
+  },
+  "include": ["src/ambient.d.ts"],
+  "files": ["src/extension.ts"]
+}

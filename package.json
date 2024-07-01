@@ -1,0 +1,46 @@
+{
+  "name": "separate-monitor-focus",
+  "version": "0.0.0",
+  "description": "A TypeScript GNOME Extension",
+  "type": "module",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/example/focus-primary-monitor.git"
+  },
+  "author": "Cauê Souza <souzacaue@proton.me>",
+  "license": "LGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/example/focus-primary-monitor/issues"
+  },
+  "scripts": {
+    "clear": "rm -rf dist",
+    "build:app": "node esbuild.js",
+    "build": "npm run clear && npm run build:app",
+    "install:extension": "gnome-extensions install --force separate-monitor-focus@eucaue.zip",
+    "validate": "tsc --noEmit",
+    "wayland-session": "dbus-run-session -- gnome-shell --nested --wayland",
+    "dev": "clear && npm run build && npm run install:extension && npm run wayland-session",
+    "prod": "npm run build && npm run install:extension",
+    "lint": "prettier --check . & eslint . --ext .ts",
+    "format": "prettier --write . && eslint . --ext .ts --fix"
+  },
+  "homepage": "https://github.com/example/focus-primary-monitor#readme",
+  "sideEffects": false,
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.15.0",
+    "@typescript-eslint/parser": "^7.15.0",
+    "adm-zip": "^0.5.14",
+    "esbuild": "^0.22.0",
+    "eslint": "^9.6.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.3.2",
+    "typescript": "^5.5.2"
+  },
+  "dependencies": {
+    "@girs/gdk-4.0": "^4.0.0-3.3.0",
+    "@girs/gjs": "^3.3.0",
+    "@girs/gnome-shell": "^46.0.0-beta8"
+  }
+}

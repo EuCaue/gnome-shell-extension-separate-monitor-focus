@@ -1,0 +1,8 @@
+{
+  "name": "Separate Monitor Focus",
+  "description": "Separate focus between monitors",
+  "uuid": "separate-monitor-focus@eucaue",
+  "url": "https://github.com/example/",
+  "settings-schema": "org.gnome.shell.extensions.separate-monitor-focus",
+  "shell-version": ["45", "46"]
+}

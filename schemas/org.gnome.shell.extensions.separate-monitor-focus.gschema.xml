@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.separate-monitor-focus"
+    path="/org/gnome/shell/extensions/separate-monitor-focus/">
+  </schema>
+</schemalist>
